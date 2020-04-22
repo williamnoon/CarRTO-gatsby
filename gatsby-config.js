@@ -1,65 +1,39 @@
-const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Serif',
-    description: 'my theme',
-    contact: {
-      phone: 'XXX XXX XXX',
-      email: 'zerostaticthemes@gmail.com',
-    },
-    menuLinks: [
-      {
-        name: 'Services',
-        link: '/services',
-      },
-      {
-        name: 'Team',
-        link: '/team',
-      },
-      {
-        name: 'Testimonials',
-        link: '/testimonials',
-      },
-      {
-        name: 'Contact',
-        link: '/contact',
-      },
-    ],
+    title: `Car RTO`,
+    description: `Car RTO`,
+    author: `Hassan Sharif`,
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-transformer-json',
-    'gatsby-transformer-remark',
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/data`,
-        name: 'data',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
+        name: `images`,
         path: `${__dirname}/src/images`,
-        name: 'images',
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-smoothscroll`,
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        trackingId: guid ? guid : 'UA-XXX-1',
-        // Puts tracking script in the head instead of the body
-        head: false,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
-};
+}
