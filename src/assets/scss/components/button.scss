@@ -1,0 +1,43 @@
+.btn {
+  border-radius: 0;
+  padding: 0.625rem 1.5rem;
+  font-size: 1.0625;
+  text-transform: uppercase;
+  font-family: $familySemibold;
+}
+.btn-default {
+  background: $rent;
+  border-color: $rent;
+  color: $white;
+  // border-radius: 4px;
+  // padding: 10px 36px 10px;
+  &:hover,
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active {
+    background: $rentHover;
+    border-color: $rentHover;
+    color: $white;
+  }
+  &.focus,
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 55, 30, 0.25);
+  }
+}
+.btn-light {
+  background: $white;
+  border-color: $white;
+  color: $textDark;
+  &:hover,
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active {
+    background: $white;
+    border-color: $white;
+    color: $textDark;
+  }
+  &.focus,
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  }
+}

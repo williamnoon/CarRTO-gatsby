@@ -1,0 +1,294 @@
+@import "libs/fonts.scss";
+@import "libs/vars.scss";
+@import "components/button.scss";
+@import "global.scss";
+
+.login-Container {
+  height: 100vh;
+  .verify-identity-container {
+    display: flex;
+    color: #fff;
+    height: 250px;
+    background: #c0310e;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    flex-direction: column;
+    .header {
+      text-align: center;
+      flex: 1;
+    }
+    .body {
+      display: flex;
+      justify-content: center;
+      flex: 1 1;
+      width: 100%;
+      .facebook {
+        text-align: center;
+        flex: 1 1;
+        background: none;
+        border: none;
+        color: #fff;
+        i {
+          margin-right: 4px;
+        }
+      }
+      .gmail {
+        text-align: center;
+        flex: 1 1;
+        background: none !important;
+        border: none !important;
+        color: #fff !important;
+      }
+      .phone-label {
+        .phone-input {
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      .go-back {
+        flex: 1;
+        text-align: center;
+        button {
+        }
+      }
+      .middle-text {
+        text-align: center;
+        flex: 1;
+        .header {
+        }
+        .body {
+        }
+      }
+      .continue {
+        text-align: center;
+        flex: 1;
+        button {
+        }
+      }
+    }
+  }
+}
+.dashboard-container {
+  text-align: center;
+  .heading {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.datePickerInput {
+  width: 100%;
+  min-width: 150px;
+  div {
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 6px;
+    height: 55px;
+    background-color: #fff;
+    input {
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+}
+.timePickerRoot {
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 6px;
+  height: 55px;
+  background-color: #fff;
+  select {
+    padding: 10px;
+    height: 70%;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  :focus {
+    background-color: unset !important;
+  }
+}
+.MuiPickersBasePicker-container {
+  .MuiToolbar-root {
+    background: #b4371e;
+  }
+  .MuiPickersDay-daySelected {
+    background: #b4371e;
+  }
+  .MuiPickersDay-daySelected:hover:hover {
+    background: #b4371e;
+  }
+}
+
+.login-dialog-root {
+  .MuiPaper-root {
+    background-color: unset;
+  }
+  .MuiDialog-paper {
+    box-shadow: unset;
+  }
+  .login-dialog {
+    .tabRtoContainer {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      .tabRtoSec .tabRtoHolder .tab-content .tab-pane {
+        padding: 0px;
+      }
+    }
+  }
+}
+
+.confirmVehicleDialog {
+  .MuiDialog-paper {
+    overflow-y: unset !important;
+  }
+  .MuiPaper-root {
+    background-color: transparent !important;
+  }
+  .MuiDialog-paper {
+    box-shadow: unset;
+  }
+  .MuiDialog-container {
+    overflow-y: auto;
+  }
+  .MuiDialog-paperWidthSm {
+    max-width: unset !important;
+  }
+  .confirmVehicleDialogMain {
+    .tabRtoContainer {
+      .tabRtoSec .tabRtoHolder .tab-content .tab-pane {
+        padding: 0px;
+      }
+    }
+  }
+}
+.tabReservation {
+  margin-bottom: 0px !important;
+}
+
+.login-admin-container {
+  max-width: 420px;
+  margin: 58px auto;
+  text-align: center;
+  .carRto-logo {
+    padding: 14px;
+  }
+  .error {
+    text-align: left;
+    color: red;
+    font-size: 14px;
+  }
+  .login-admin-form {
+    margin: 10px;
+    text-align: left;
+    .email-parent {
+      margin-top: 10px;
+    }
+    .rememberMe-parent {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      .checkbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .submit-button {
+      margin-top: 10px;
+    }
+  }
+}
+.vehicleFeatureRow {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 767px) {
+    font-size: 0.85rem;
+    > div:last-child {
+      white-space: nowrap;
+    }
+  }
+}
+.featurePriceDetailPopupRoot {
+}
+.amount-style {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.addVehicleDialog {
+  .MuiDialog-paper {
+    padding: 20px;
+    .addVehicletitle {
+      padding: 0px;
+    }
+    .inputField {
+      div {
+        input {
+          outline: none;
+          border: 1px solid #e9ebec;
+          border-radius: 2px;
+          height: 32px;
+          padding: 8px;
+          font-family: Roboto;
+          color: #414141;
+          font-size: 16px;
+          letter-spacing: -0.5px;
+          font-weight: 400;
+        }
+      }
+    }
+    .addVehicleFooter {
+      margin-top: 8px;
+    }
+    .addVehicleSwitch {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .selectFieldRoot {
+      outline: none;
+      border: 1px solid #e9ebec;
+      border-radius: 2px;
+      height: 49px;
+      font-family: Roboto;
+      color: #414141;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+      font-weight: 400;
+      width: 100%;
+      label {
+        padding: 0px 6px;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 17px;
+        color: #8c909d;
+        letter-spacing: -0.5px;
+        font-weight: 400;
+      }
+      select {
+        padding-left: 5px;
+        font-family: Roboto;
+        color: #414141;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+        font-weight: 400;
+      }
+      :focus {
+        background-color: unset;
+      }
+    }
+  }
+}
